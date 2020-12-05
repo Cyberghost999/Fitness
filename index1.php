@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,14 +50,16 @@ https://www.tooplate.com/view/2119-gymso-fitness
                     </li>
                     <?php
                     session_start();
-                    if($_SESSION['login_status']=false){
+                    $a = $_SESSION['login_status'];
+                    if($a==false){
+                        
                     ?>
                     <li class="nav-item">
                         <a href="RegistrationForm/LoginForm.php" class="nav-link">login</a>
                     </li>
 
                     <li class="nav-item">
-                        <button href="RegistrationForm/index.php" class="nav-link">Signup</button>
+                        <a href="RegistrationForm/index.php" class="nav-link">Signup</a>
                     </li>
                     <?php
                     }
@@ -67,16 +70,13 @@ https://www.tooplate.com/view/2119-gymso-fitness
                     </li>
 
                     <li class="nav-item">
-                        <form method="post">
-                        <button href="logout.php" class="nav-link" name="logout" >Logout</button>
-                        </form>
+                        
+                        <a href="logout.php" class="nav-link" name="logout" >Logout</a>
+                        
                     </li>
                     <?php
                     }
-                    if(isset($_POST['logout'])){
-                        session_destroy();
-                        header("Location: index1.php");
-                    }
+                   
                     ?>
                 </ul>
 
@@ -106,7 +106,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
                                     <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Upgrade your body at Gymso Fitness</h1>
                                     <?php
-                    if($_SESSION['login_status']=false){
+                    if($_SESSION['login_status']==false){
                         ?>
                                     <a href="#feature" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600">Get started</a>
                                     <?php
@@ -131,7 +131,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
         <div class="container">
             <div class="row">
                     <?php
-                    if($_SESSION['login_status']=false){
+                    if($_SESSION['login_status']==false){
                         ?>
                 <div class="d-flex flex-column justify-content-center ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
                     <h2 class="mb-3 text-white" data-aos="fade-up">New to the gymso?</h2>
@@ -481,11 +481,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
         </div>
       </div>
     </div>
-    <?php
-    if($_SESSION['login_status']=true){
-        echo "lorem";
-    }
-        ?>
+    
 
      <!-- SCRIPTS -->
      <script src="js/jquery.min.js"></script>

@@ -1,5 +1,6 @@
 <?php
 session_start();
-session_destroy();
+$_SESSION['login_status']=false;
+unset($_SESSION['email']);
 header("Location: index1.php");
 ?>
