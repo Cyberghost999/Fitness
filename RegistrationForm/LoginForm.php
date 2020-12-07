@@ -1,7 +1,7 @@
 <?php
 session_start();
 if($_SESSION['login_status']==true){
-    header("Location: ../index1.php");
+    // header("Location: ../index1.php");
 }
 else{
     ?>
@@ -77,7 +77,7 @@ else{
         $pass = $_POST['pass'];
         $retrieve = "SELECT * FROM `signup` WHERE email = '$email' AND password = '$pass'";
         $ret = mysqli_query($conn, $retrieve);
-        $rowcount = mysqli_num_rows($ret);
+        echo $rowcount = mysqli_num_rows($ret);
 
         $retemail = "SELECT * FROM `signup` WHERE email = '$email'";
         $retmail = mysqli_query($conn, $retemail);

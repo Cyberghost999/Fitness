@@ -97,7 +97,7 @@ else{
         if (!$conn) {
             die('Could not Connect MySql Server:' . mysql_error());
         }
-
+        
 
         if (isset($_POST['submit'])) {
             $name = $_POST['name'];
@@ -161,4 +161,5 @@ else{
     <!-- end document-->
     <?php
 }
+
 ?>
