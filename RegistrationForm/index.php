@@ -64,7 +64,7 @@ else{
                                 <input class="input--style-3" type="email" placeholder="Email" name="email" required>
                             </div>
                             <div class="input-group">
-                                <input class="input--style-3" type="number" placeholder="Phone" name="phone" max="11" min="3" required>
+                                <input class="input--style-3" type="number" placeholder="Phone" name="phone"  required>
                             </div>
                             <div class="input-group">
                                 <input class="input--style-3" type="password" placeholder="password" name="password" required>

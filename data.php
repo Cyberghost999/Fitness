@@ -41,13 +41,13 @@ $i=0;
 while($row = mysqli_fetch_array($result)) {
     ?>
 <tr>
-    <td><?php echo $row['SrNo']; ?></td>
+    <td><?php echo $row['id']; ?></td>
     <td><?php echo $row['Name']; ?></td>
     <td><?php echo $row['dob']; ?></td>
     <td><?php echo $row['gender']; ?></td>
     <td><?php echo $row['email']; ?></td>
     <td><?php echo $row['phone']; ?></td>
-    <td><?php echo $row['joindate']; ?></td>    
+    <td><?php echo $row['created_at']; ?></td>    
 </tr>
 <?php
 $i++;

@@ -73,7 +73,7 @@ if ($_SESSION['login_status'] == false) {
                                     <input class="input--style-3" type="text" placeholder="Phone: <?php echo $row["phone"]; ?>" readonly="readonly">
                                 </div>
                                 <div class="input-group">
-                                    <input class="input--style-3" type="text" placeholder="Joined: <?php echo $row["joindate"]; ?>" readonly="readonly">
+                                    <input class="input--style-3" type="text" placeholder="Joined: <?php echo $row["created_at"]; ?>" readonly="readonly">
                                 </div>
 
                                 <?php

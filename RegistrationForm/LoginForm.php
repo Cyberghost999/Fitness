@@ -77,7 +77,7 @@ else{
         $pass = $_POST['pass'];
         $retrieve = "SELECT * FROM `signup` WHERE email = '$email' AND password = '$pass'";
         $ret = mysqli_query($conn, $retrieve);
-        echo $rowcount = mysqli_num_rows($ret);
+        $rowcount = mysqli_num_rows($ret);
 
         $retemail = "SELECT * FROM `signup` WHERE email = '$email'";
         $retmail = mysqli_query($conn, $retemail);
